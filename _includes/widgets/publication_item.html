@@ -1,0 +1,129 @@
+<style>
+  .tag-badge {
+    display: inline-block;
+    padding: 0.35em 0.75em;
+    font-size: 0.7rem;
+    border-radius: 999px;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    background-color: #f8f9fa;
+    color: black;
+    /* color: #343a40; */
+  }
+
+  .tag-badge-bio {
+    display: inline-block;
+    padding: 0.3em 0.75em;
+    font-size: 0.7rem;
+    font-weight: 500;
+    border-radius: 999px;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    background-color: #ff796d;
+    color: #f8f9fa;
+    /* color: #343a40; */
+  }
+
+  .tag-bio {
+    color: #ff6f61;
+    font-weight: 500;
+  }
+
+  .award-badge {
+    display: inline-block;
+    padding: 0.35em 0.75em;
+    font-size: 0.7rem;
+    border-radius: 999px;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    background-color: #FAFAD2;
+    color: #343a40;
+  }
+</style>
+
+{% assign item = include.item %}
+{% assign project_link = nil %}
+{% for link in item.links %}
+  {% if link[0] == "Project" %}
+    {% assign project_link = link[1].url | default: link[1] %}
+  {% endif %}
+{% endfor %}
+
+
+<div class="d-none d-md-block">
+    <div class="row no-gutters {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-top{% endif %} {% if include.last %}rounded-bottom{% endif %} {% if item.selected and page.path contains 'publications' %}selected-publication{% endif %}">
+        <div class="col-md-4 col-xl-3 mb-md-0 p-md-3 d-flex align-items-start publication-container">
+            {%- if item.cover -%}
+            <img data-src="{{ item.cover | relative_url }}" alt="{{ item.title }}" class="lazy publication-cover rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+            {%- else -%}
+            <svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
+            {%- endif -%}
+            {%- if item.pub_ab -%}
+            <div class="pub-badge">{{ item.pub_ab }}</div>
+            {%- endif -%}
+        </div>
+        <div class="col-md-8 col-xl-9 p-3 pl-md-0">
+            <h5 class="pub-item-title mt-0 mb-0 font-weight-normal">
+              {% if project_link %}
+                <a href="{{ project_link }}" class="item_link" target="_blank">{{ item.title }}</a>
+              {% else %}
+                {{ item.title }}
+              {% endif %}
+            </h5>
+            <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
+            <p class="mt-0 mb-0 small ">{{item.pub_pre}}<i><b>{{ item.pub }}</b></i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
+            <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
+            
+            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                {% for link in item.links %}
+                {% if link[1].url %}
+                <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
+                {% else %}
+                <a target="_blank" href="{{ link[1] }}" class="item_link">[{{ link[0] }}]</a>
+                {% endif %}
+                {% endfor %}
+            </p>
+            {% if item.tags %}
+            <p class="mt-0 mb-0">
+                {% for tag in item.tags %}
+                    <span class="tag-badge mr-1" style="margin-top: 1em;">{{ tag }}</span>
+                {% endfor %}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="row no-gutters d-md-none {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-top{% endif %} {% if include.last %}rounded-bottom{% endif %} {% if item.cover %}lazy{% endif %} {% if item.selected and page.path contains 'publications' %}selected-publication{% endif %}" data-src="{{ item.cover | relative_url }}">
+    <div class="w-100 pub-mobile-overlay">
+        <div class="d-flex align-items-start flex-column py-3 px-4 publication-container">
+            <div class="mb-auto"></div>
+            <div>
+                <h5 class="pub-item-title mt-0 mb-0 font-weight-normal">
+                  {% if project_link %}
+                    <a href="{{ project_link }}" class="item_link" target="_blank">{{ item.title }}</a>
+                  {% else %}
+                    {{ item.title }}
+                  {% endif %}
+                </h5>
+                <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
+                <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
+                <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
+                
+                <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
+                    {% for link in item.links %}
+                    {% if link[1].url %}
+                    <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
+                    {% else %}
+                    <a target="_blank" href="{{ link[1] }}" class="item_link">[{{ link[0] }}]</a>
+                    {% endif %}
+                    {% endfor %}
+                </p>
+            </div>
+            {%- if item.pub_ab -%}
+            <div class="pub-badge">{{ item.pub_ab }}</div>
+            {%- endif -%}
+        </div>
+    </div>
+
+</div>
