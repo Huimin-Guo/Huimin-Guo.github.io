@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <line x1="48" y1="0" x2="48" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="96" y1="0" x2="96" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="144" y1="0" x2="144" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="192" y1="0" x2="192" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="240" y1="0" x2="240" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="288" y1="0" x2="288" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="336" y1="0" x2="336" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="384" y1="0" x2="384" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="432" y1="0" x2="432" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="480" y1="0" x2="480" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="528" y1="0" x2="528" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="576" y1="0" x2="576" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="48" x2="600" y2="48" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="96" x2="600" y2="96" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="144" x2="600" y2="144" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="192" x2="600" y2="192" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="240" x2="600" y2="240" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="288" x2="600" y2="288" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="336" x2="600" y2="336" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="384" x2="600" y2="384" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <circle cx="492" cy="88" r="135" fill="#0f172a" fill-opacity="0.09"/>
+  <rect x="132" y="36" width="46" height="38" rx="7" fill="#357ace" fill-opacity="0.63"/>
+  <rect x="186" y="36" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.61"/>
+  <rect x="240" y="36" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.11"/>
+  <rect x="294" y="36" width="46" height="38" rx="7" fill="#357ace" fill-opacity="0.22"/>
+  <rect x="348" y="36" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.30"/>
+  <rect x="402" y="36" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.31"/>
+  <rect x="456" y="36" width="46" height="38" rx="7" fill="#357ace" fill-opacity="0.20"/>
+  <rect x="510" y="36" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.26"/>
+  <rect x="132" y="82" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.66"/>
+  <rect x="186" y="82" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.57"/>
+  <rect x="240" y="82" width="46" height="38" rx="7" fill="#357ace" fill-opacity="0.71"/>
+  <rect x="294" y="82" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.12"/>
+  <rect x="348" y="82" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.21"/>
+  <rect x="402" y="82" width="46" height="38" rx="7" fill="#357ace" fill-opacity="0.21"/>
+  <rect x="456" y="82" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.34"/>
+  <rect x="510" y="82" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.31"/>
+  <rect x="132" y="128" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.34"/>
+  <rect x="186" y="128" width="46" height="38" rx="7" fill="#357ace" fill-opacity="0.74"/>
+  <rect x="240" y="128" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.56"/>
+  <rect x="294" y="128" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.69"/>
+  <rect x="348" y="128" width="46" height="38" rx="7" fill="#357ace" fill-opacity="0.16"/>
+  <rect x="402" y="128" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.14"/>
+  <rect x="456" y="128" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.10"/>
+  <rect x="510" y="128" width="46" height="38" rx="7" fill="#357ace" fill-opacity="0.13"/>
+  <rect x="132" y="174" width="46" height="38" rx="7" fill="#357ace" fill-opacity="0.28"/>
+  <rect x="186" y="174" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.15"/>
+  <rect x="240" y="174" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.78"/>
+  <rect x="294" y="174" width="46" height="38" rx="7" fill="#357ace" fill-opacity="0.82"/>
+  <rect x="348" y="174" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.54"/>
+  <rect x="402" y="174" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.24"/>
+  <rect x="456" y="174" width="46" height="38" rx="7" fill="#357ace" fill-opacity="0.23"/>
+  <rect x="510" y="174" width="46" height="38" rx="7" fill="#0f172a" fill-opacity="0.33"/>
+  <rect x="0" y="270" width="600" height="130" fill="rgba(255, 255, 255, 0.85)"/>
+  <line x1="0" y1="270" x2="600" y2="270" stroke="#0f172a" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="30" y="300" width="6" height="70" rx="3" fill="#0f172a"/>
+  <text x="50" y="332" fill="#0f172a" font-family="IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="31" font-weight="700">MFFUNet</text>
+  <text x="50" y="364" fill="rgba(15,23,42,0.65)" font-family="IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="500">Computerized Medical Imaging and Graphics …</text>
+  <rect x="1" y="1" width="598" height="398" fill="none" stroke="rgba(15,23,42,0.12)" stroke-width="2"/>
+</svg>

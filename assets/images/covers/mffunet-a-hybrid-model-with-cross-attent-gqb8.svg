@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <line x1="48" y1="0" x2="48" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="96" y1="0" x2="96" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="144" y1="0" x2="144" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="192" y1="0" x2="192" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="240" y1="0" x2="240" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="288" y1="0" x2="288" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="336" y1="0" x2="336" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="384" y1="0" x2="384" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="432" y1="0" x2="432" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="480" y1="0" x2="480" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="528" y1="0" x2="528" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="576" y1="0" x2="576" y2="400" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="48" x2="600" y2="48" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="96" x2="600" y2="96" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="144" x2="600" y2="144" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="192" x2="600" y2="192" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="240" x2="600" y2="240" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="288" x2="600" y2="288" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="336" x2="600" y2="336" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <line x1="0" y1="384" x2="600" y2="384" stroke="rgba(15,23,42,0.06)" stroke-width="1"/>
+  <circle cx="492" cy="88" r="135" fill="#0f172a" fill-opacity="0.09"/>
+  <path d="M 0 95 L 20 85.8 L 40 79.7 L 60 74.4 L 80 70.0 L 100 67.0 L 120 65.3 L 140 65.1 L 160 66.4 L 180 69.1 L 200 73.2 L 220 78.3 L 240 84.2 L 260 90.7 L 280 97.4 L 300 104.0 L 320 110.1 L 340 115.5 L 360 119.9 L 380 123.0 L 400 124.7 L 420 124.9 L 440 123.6 L 460 120.9 L 480 117.0 L 500 111.9 L 520 105.9 L 540 99.5 L 560 92.8 L 580 86.2 L 600 80.0" fill="none" stroke="#0f172a" stroke-opacity="0.58" stroke-width="4"/>
+  <path d="M 0 139 L 20 187.8 L 40 185.4 L 60 180.0 L 80 172.2 L 100 162.4 L 120 151.1 L 140 139.1 L 160 127.0 L 180 115.7 L 200 105.9 L 220 98.0 L 240 92.7 L 260 90.2 L 280 90.7 L 300 94.1 L 320 100.3 L 340 108.9 L 360 119.3 L 380 130.9 L 400 143.0 L 420 154.8 L 440 165.7 L 460 175.0 L 480 182.1 L 500 186.5 L 520 188.0 L 540 186.5 L 560 182.1 L 580 175.1 L 600 165.9" fill="none" stroke="#357ace" stroke-opacity="0.49" stroke-width="2.4"/>
+  <path d="M 0 183 L 20 146.5 L 40 145.2 L 60 148.9 L 80 157.2 L 100 169.0 L 120 182.6 L 140 196.3 L 160 208.2 L 180 216.8 L 200 220.8 L 220 219.7 L 240 213.8 L 260 203.7 L 280 190.8 L 300 176.9 L 320 163.8 L 340 153.3 L 360 146.8 L 380 145.1 L 400 148.5 L 420 156.5 L 440 168.0 L 460 181.6 L 480 195.4 L 500 207.5 L 520 216.3 L 540 220.7 L 560 220.0 L 580 214.4 L 600 204.5" fill="none" stroke="#0f172a" stroke-opacity="0.40" stroke-width="2.4"/>
+  <path d="M 0 227 L 20 261.6 L 40 270.6 L 60 275.9 L 80 276.8 L 100 273.5 L 120 266.1 L 140 255.3 L 160 242.0 L 180 227.5 L 200 212.9 L 220 199.5 L 240 188.5 L 260 180.9 L 280 177.3 L 300 178.0 L 320 182.9 L 340 191.7 L 360 203.6 L 380 217.5 L 400 232.2 L 420 246.5 L 440 259.1 L 460 268.9 L 480 275.0 L 500 277.0 L 520 274.6 L 540 268.1 L 560 258.0 L 580 245.2 L 600 230.8" fill="none" stroke="#357ace" stroke-opacity="0.31" stroke-width="2.4"/>
+  <rect x="0" y="270" width="600" height="130" fill="rgba(255, 255, 255, 0.85)"/>
+  <line x1="0" y1="270" x2="600" y2="270" stroke="#0f172a" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="30" y="300" width="6" height="70" rx="3" fill="#0f172a"/>
+  <text x="50" y="332" fill="#0f172a" font-family="IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="31" font-weight="700">MFFUNet</text>
+  <text x="50" y="364" fill="rgba(15,23,42,0.65)" font-family="IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="500">Computerized Medical Imaging and Graphics …</text>
+  <rect x="1" y="1" width="598" height="398" fill="none" stroke="rgba(15,23,42,0.12)" stroke-width="2"/>
+</svg>

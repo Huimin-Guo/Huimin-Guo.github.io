@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e8eff7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <line x1="48" y1="0" x2="48" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="96" y1="0" x2="96" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="144" y1="0" x2="144" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="192" y1="0" x2="192" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="240" y1="0" x2="240" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="288" y1="0" x2="288" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="336" y1="0" x2="336" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="384" y1="0" x2="384" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="432" y1="0" x2="432" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="480" y1="0" x2="480" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="528" y1="0" x2="528" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="576" y1="0" x2="576" y2="400" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="0" y1="48" x2="600" y2="48" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="0" y1="96" x2="600" y2="96" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="0" y1="144" x2="600" y2="144" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="0" y1="192" x2="600" y2="192" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="0" y1="240" x2="600" y2="240" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="0" y1="288" x2="600" y2="288" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="0" y1="336" x2="600" y2="336" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <line x1="0" y1="384" x2="600" y2="384" stroke="rgba(53,122,206,0.08)" stroke-width="1"/>
+  <circle cx="492" cy="88" r="135" fill="#357ace" fill-opacity="0.09"/>
+  <path d="M 0 95 L 20 98.2 L 40 91.0 L 60 84.1 L 80 77.8 L 100 72.6 L 120 68.8 L 140 66.5 L 160 66.0 L 180 67.3 L 200 70.3 L 220 74.8 L 240 80.5 L 260 87.1 L 280 94.2 L 300 101.4 L 320 108.1 L 340 114.1 L 360 118.8 L 380 122.2 L 400 123.8 L 420 123.7 L 440 121.9 L 460 118.4 L 480 113.4 L 500 107.4 L 520 100.5 L 540 93.4 L 560 86.3 L 580 79.8 L 600 74.2" fill="none" stroke="#357ace" stroke-opacity="0.58" stroke-width="4"/>
+  <path d="M 0 139 L 20 165.3 L 40 163.3 L 60 160.0 L 80 155.7 L 100 150.6 L 120 144.9 L 140 138.9 L 160 132.9 L 180 127.2 L 200 122.1 L 220 117.9 L 240 114.7 L 260 112.7 L 280 112.0 L 300 112.7 L 320 114.7 L 340 117.9 L 360 122.1 L 380 127.3 L 400 132.9 L 420 138.9 L 440 144.9 L 460 150.6 L 480 155.8 L 500 160.0 L 520 163.3 L 540 165.3 L 560 166.0 L 580 165.4 L 600 163.4" fill="none" stroke="#359466" stroke-opacity="0.49" stroke-width="2.4"/>
+  <path d="M 0 183 L 20 161.1 L 40 159.5 L 60 159.0 L 80 159.7 L 100 161.6 L 120 164.6 L 140 168.5 L 160 173.1 L 180 178.2 L 200 183.5 L 220 188.9 L 240 193.9 L 260 198.4 L 280 202.1 L 300 204.8 L 320 206.5 L 340 207.0 L 360 206.3 L 380 204.4 L 400 201.5 L 420 197.6 L 440 193.0 L 460 187.9 L 480 182.6 L 500 177.3 L 520 172.2 L 540 167.7 L 560 164.0 L 580 161.2 L 600 159.5" fill="none" stroke="#357ace" stroke-opacity="0.40" stroke-width="2.4"/>
+  <path d="M 0 227 L 20 229.3 L 40 238.2 L 60 246.7 L 80 254.3 L 100 260.9 L 120 266.1 L 140 269.7 L 160 271.7 L 180 271.9 L 200 270.2 L 220 266.9 L 240 262.0 L 260 255.6 L 280 248.2 L 300 239.8 L 320 231.0 L 340 222.0 L 360 213.2 L 380 205.0 L 400 197.6 L 420 191.5 L 440 186.7 L 460 183.5 L 480 182.1 L 500 182.4 L 520 184.6 L 540 188.4 L 560 193.8 L 580 200.5 L 600 208.2" fill="none" stroke="#359466" stroke-opacity="0.31" stroke-width="2.4"/>
+  <rect x="0" y="270" width="600" height="130" fill="rgba(255, 255, 255, 0.85)"/>
+  <line x1="0" y1="270" x2="600" y2="270" stroke="#357ace" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="30" y="300" width="6" height="70" rx="3" fill="#357ace"/>
+  <text x="50" y="332" fill="#0f172a" font-family="IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="31" font-weight="700">ESO-PVT</text>
+  <text x="50" y="364" fill="rgba(15,23,42,0.68)" font-family="IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="500">International Conference on Frontier Compu…</text>
+  <rect x="1" y="1" width="598" height="398" fill="none" stroke="rgba(15,23,42,0.12)" stroke-width="2"/>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a121b"/>
+      <stop offset="100%" stop-color="#4a1c2c"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#bg)"/>
+  <line x1="48" y1="0" x2="48" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="96" y1="0" x2="96" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="144" y1="0" x2="144" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="192" y1="0" x2="192" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="240" y1="0" x2="240" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="288" y1="0" x2="288" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="336" y1="0" x2="336" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="384" y1="0" x2="384" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="432" y1="0" x2="432" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="480" y1="0" x2="480" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="528" y1="0" x2="528" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="576" y1="0" x2="576" y2="400" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="48" x2="600" y2="48" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="96" x2="600" y2="96" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="144" x2="600" y2="144" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="192" x2="600" y2="192" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="240" x2="600" y2="240" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="288" x2="600" y2="288" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="336" x2="600" y2="336" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="384" x2="600" y2="384" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <circle cx="492" cy="88" r="135" fill="#fb7185" fill-opacity="0.12"/>
+  <ellipse cx="426.0" cy="156.0" rx="76" ry="51" transform="rotate(13 426.0 156.0)" fill="none" stroke="#fbbf24" stroke-opacity="0.46" stroke-width="1.8" />
+  <ellipse cx="426.0" cy="156.0" rx="114" ry="76" transform="rotate(0 426.0 156.0)" fill="none" stroke="#fb7185" stroke-opacity="0.41" stroke-width="1.8" />
+  <ellipse cx="426.0" cy="156.0" rx="152" ry="101" transform="rotate(-17 426.0 156.0)" fill="none" stroke="#fbbf24" stroke-opacity="0.36" stroke-width="3" stroke-dasharray="7 7"/>
+  <ellipse cx="426.0" cy="156.0" rx="190" ry="126" transform="rotate(10 426.0 156.0)" fill="none" stroke="#fb7185" stroke-opacity="0.32" stroke-width="1.8" />
+  <ellipse cx="426.0" cy="156.0" rx="228" ry="151" transform="rotate(12 426.0 156.0)" fill="none" stroke="#fbbf24" stroke-opacity="0.28" stroke-width="1.8" />
+  <ellipse cx="426.0" cy="156.0" rx="266" ry="176" transform="rotate(-9 426.0 156.0)" fill="none" stroke="#fb7185" stroke-opacity="0.23" stroke-width="1.8" stroke-dasharray="7 7"/>
+  <ellipse cx="426.0" cy="156.0" rx="304" ry="201" transform="rotate(-9 426.0 156.0)" fill="none" stroke="#fbbf24" stroke-opacity="0.18" stroke-width="1.8" />
+  <ellipse cx="426.0" cy="156.0" rx="342" ry="226" transform="rotate(8 426.0 156.0)" fill="none" stroke="#fb7185" stroke-opacity="0.14" stroke-width="1.8" />
+  <line x1="408.00000000000006" y1="156" x2="444.00000000000006" y2="156" stroke="#fb7185" stroke-opacity="0.7" stroke-width="2"/>
+  <line x1="426.00000000000006" y1="138" x2="426.00000000000006" y2="174" stroke="#fb7185" stroke-opacity="0.7" stroke-width="2"/>
+  <rect x="0" y="270" width="600" height="130" fill="rgba(9, 14, 24, 0.58)"/>
+  <line x1="0" y1="270" x2="600" y2="270" stroke="#fb7185" stroke-opacity="0.35" stroke-width="2"/>
+  <rect x="30" y="300" width="6" height="70" rx="3" fill="#fb7185"/>
+  <text x="50" y="332" fill="#fff1f2" font-family="IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="31" font-weight="700">BCTVNet</text>
+  <text x="50" y="364" fill="rgba(255,241,242,0.74)" font-family="IBM Plex Sans, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="20" font-weight="500">Machine Learning: Science and Technology ·…</text>
+  <rect x="1" y="1" width="598" height="398" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+</svg>

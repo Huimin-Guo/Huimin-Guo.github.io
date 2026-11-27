@@ -1,122 +1,290 @@
-//  Formatted version of a popular md5 implementation
-//  Original copyright (c) Paul Johnston & Greg Holt.
-function md5(inputString) {
-    var hc = "0123456789abcdef";
-    function rh(n) { var j, s = ""; for (j = 0; j <= 3; j++) s += hc.charAt((n >> (j * 8 + 4)) & 0x0F) + hc.charAt((n >> (j * 8)) & 0x0F); return s; }
-    function ad(x, y) { var l = (x & 0xFFFF) + (y & 0xFFFF); var m = (x >> 16) + (y >> 16) + (l >> 16); return (m << 16) | (l & 0xFFFF); }
-    function rl(n, c) { return (n << c) | (n >>> (32 - c)); }
-    function cm(q, a, b, x, s, t) { return ad(rl(ad(ad(a, q), ad(x, t)), s), b); }
-    function ff(a, b, c, d, x, s, t) { return cm((b & c) | ((~b) & d), a, b, x, s, t); }
-    function gg(a, b, c, d, x, s, t) { return cm((b & d) | (c & (~d)), a, b, x, s, t); }
-    function hh(a, b, c, d, x, s, t) { return cm(b ^ c ^ d, a, b, x, s, t); }
-    function ii(a, b, c, d, x, s, t) { return cm(c ^ (b | (~d)), a, b, x, s, t); }
-    function sb(x) {
-        var i; var nblk = ((x.length + 8) >> 6) + 1; var blks = new Array(nblk * 16); for (i = 0; i < nblk * 16; i++) blks[i] = 0;
-        for (i = 0; i < x.length; i++) blks[i >> 2] |= x.charCodeAt(i) << ((i % 4) * 8);
-        blks[i >> 2] |= 0x80 << ((i % 4) * 8); blks[nblk * 16 - 2] = x.length * 8; return blks;
+// Academic Cover Visual Hash Generator
+// Deterministically renders a sleek, publication-grade scientific SVG cover when no cover image is provided.
+(function () {
+  function hashBytes(str) {
+    var s = String(str || 'academic-paper');
+    var h1 = 0x811c9dc5;
+    var h2 = 0x9e3779b9;
+    for (var i = 0; i < s.length; i++) {
+      var ch = s.charCodeAt(i);
+      h1 ^= ch;
+      h1 = Math.imul(h1, 0x01000193);
+      h2 = Math.imul(h2 ^ ch, 0x85ebca6b);
     }
-    var i, x = sb("" + inputString), a = 1732584193, b = -271733879, c = -1732584194, d = 271733878, olda, oldb, oldc, oldd;
-    for (i = 0; i < x.length; i += 16) {
-        olda = a; oldb = b; oldc = c; oldd = d;
-        a = ff(a, b, c, d, x[i + 0], 7, -680876936); d = ff(d, a, b, c, x[i + 1], 12, -389564586); c = ff(c, d, a, b, x[i + 2], 17, 606105819);
-        b = ff(b, c, d, a, x[i + 3], 22, -1044525330); a = ff(a, b, c, d, x[i + 4], 7, -176418897); d = ff(d, a, b, c, x[i + 5], 12, 1200080426);
-        c = ff(c, d, a, b, x[i + 6], 17, -1473231341); b = ff(b, c, d, a, x[i + 7], 22, -45705983); a = ff(a, b, c, d, x[i + 8], 7, 1770035416);
-        d = ff(d, a, b, c, x[i + 9], 12, -1958414417); c = ff(c, d, a, b, x[i + 10], 17, -42063); b = ff(b, c, d, a, x[i + 11], 22, -1990404162);
-        a = ff(a, b, c, d, x[i + 12], 7, 1804603682); d = ff(d, a, b, c, x[i + 13], 12, -40341101); c = ff(c, d, a, b, x[i + 14], 17, -1502002290);
-        b = ff(b, c, d, a, x[i + 15], 22, 1236535329); a = gg(a, b, c, d, x[i + 1], 5, -165796510); d = gg(d, a, b, c, x[i + 6], 9, -1069501632);
-        c = gg(c, d, a, b, x[i + 11], 14, 643717713); b = gg(b, c, d, a, x[i + 0], 20, -373897302); a = gg(a, b, c, d, x[i + 5], 5, -701558691);
-        d = gg(d, a, b, c, x[i + 10], 9, 38016083); c = gg(c, d, a, b, x[i + 15], 14, -660478335); b = gg(b, c, d, a, x[i + 4], 20, -405537848);
-        a = gg(a, b, c, d, x[i + 9], 5, 568446438); d = gg(d, a, b, c, x[i + 14], 9, -1019803690); c = gg(c, d, a, b, x[i + 3], 14, -187363961);
-        b = gg(b, c, d, a, x[i + 8], 20, 1163531501); a = gg(a, b, c, d, x[i + 13], 5, -1444681467); d = gg(d, a, b, c, x[i + 2], 9, -51403784);
-        c = gg(c, d, a, b, x[i + 7], 14, 1735328473); b = gg(b, c, d, a, x[i + 12], 20, -1926607734); a = hh(a, b, c, d, x[i + 5], 4, -378558);
-        d = hh(d, a, b, c, x[i + 8], 11, -2022574463); c = hh(c, d, a, b, x[i + 11], 16, 1839030562); b = hh(b, c, d, a, x[i + 14], 23, -35309556);
-        a = hh(a, b, c, d, x[i + 1], 4, -1530992060); d = hh(d, a, b, c, x[i + 4], 11, 1272893353); c = hh(c, d, a, b, x[i + 7], 16, -155497632);
-        b = hh(b, c, d, a, x[i + 10], 23, -1094730640); a = hh(a, b, c, d, x[i + 13], 4, 681279174); d = hh(d, a, b, c, x[i + 0], 11, -358537222);
-        c = hh(c, d, a, b, x[i + 3], 16, -722521979); b = hh(b, c, d, a, x[i + 6], 23, 76029189); a = hh(a, b, c, d, x[i + 9], 4, -640364487);
-        d = hh(d, a, b, c, x[i + 12], 11, -421815835); c = hh(c, d, a, b, x[i + 15], 16, 530742520); b = hh(b, c, d, a, x[i + 2], 23, -995338651);
-        a = ii(a, b, c, d, x[i + 0], 6, -198630844); d = ii(d, a, b, c, x[i + 7], 10, 1126891415); c = ii(c, d, a, b, x[i + 14], 15, -1416354905);
-        b = ii(b, c, d, a, x[i + 5], 21, -57434055); a = ii(a, b, c, d, x[i + 12], 6, 1700485571); d = ii(d, a, b, c, x[i + 3], 10, -1894986606);
-        c = ii(c, d, a, b, x[i + 10], 15, -1051523); b = ii(b, c, d, a, x[i + 1], 21, -2054922799); a = ii(a, b, c, d, x[i + 8], 6, 1873313359);
-        d = ii(d, a, b, c, x[i + 15], 10, -30611744); c = ii(c, d, a, b, x[i + 6], 15, -1560198380); b = ii(b, c, d, a, x[i + 13], 21, 1309151649);
-        a = ii(a, b, c, d, x[i + 4], 6, -145523070); d = ii(d, a, b, c, x[i + 11], 10, -1120210379); c = ii(c, d, a, b, x[i + 2], 15, 718787259);
-        b = ii(b, c, d, a, x[i + 9], 21, -343485551); a = ad(a, olda); b = ad(b, oldb); c = ad(c, oldc); d = ad(d, oldd);
+    var out = [];
+    var seed = (h1 >>> 0) ^ (h2 >>> 0);
+    for (var j = 0; j < 32; j++) {
+      seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+      out.push((seed >>> 24) & 0xff);
     }
-    return rh(a) + rh(b) + rh(c) + rh(d);
-}
+    return out;
+  }
 
+  var PALETTES = [
+    { bg1: '#0f172a', bg2: '#1e3a5f', p1: '#38bdf8', p2: '#818cf8', fg: '#f8fafc', muted: 'rgba(248,250,252,0.72)', grid: 'rgba(255,255,255,0.06)', pill: 'rgba(56,189,248,0.18)', dark: true },
+    { bg1: '#0c2239', bg2: '#1a4a6e', p1: '#60a5fa', p2: '#34d399', fg: '#f8fafc', muted: 'rgba(248,250,252,0.74)', grid: 'rgba(255,255,255,0.06)', pill: 'rgba(52,211,153,0.18)', dark: true },
+    { bg1: '#162621', bg2: '#27433a', p1: '#6ee7b7', p2: '#93c5fd', fg: '#f8fafc', muted: 'rgba(248,250,252,0.72)', grid: 'rgba(255,255,255,0.06)', pill: 'rgba(110,231,183,0.18)', dark: true },
+    { bg1: '#18181b', bg2: '#2d3138', p1: '#357ace', p2: '#60a5fa', fg: '#fafafa', muted: 'rgba(250,250,250,0.72)', grid: 'rgba(255,255,255,0.05)', pill: 'rgba(96,165,250,0.18)', dark: true },
+    { bg1: '#1e1b4b', bg2: '#312e81', p1: '#22d3ee', p2: '#a78bfa', fg: '#f8fafc', muted: 'rgba(248,250,252,0.74)', grid: 'rgba(255,255,255,0.06)', pill: 'rgba(34,211,238,0.18)', dark: true },
+    { bg1: '#f8fafc', bg2: '#e8eff7', p1: '#357ace', p2: '#359466', fg: '#0f172a', muted: 'rgba(15,23,42,0.68)', grid: 'rgba(53,122,206,0.08)', pill: 'rgba(53,122,206,0.12)', dark: false },
+  ];
 
-// This script is inspired by https://github.com/dakridge/identicon
-
-createHashGroupForString = function (str) {
-    var hashGroup = [];
-    var hash = md5(str);
-    for (var i = 0; i < hash.length; i += 1) {
-        var byte = parseInt(hash[i], 16);
-        hashGroup.push(byte);
+  function el(tag, attrs, parent) {
+    var node = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    if (attrs) {
+      Object.keys(attrs).forEach(function (k) {
+        node.setAttribute(k, String(attrs[k]));
+      });
     }
-    return hashGroup;
-}
+    if (parent) parent.appendChild(node);
+    return node;
+  }
 
-createBubbleInfo = function (hashGroup, n, w, h) {
-    var maxN = hashGroup.length / 2;
-    n = n < maxN ? n : maxN;
-    var wh = w < h ? w : h;
-    var scaleX = function (v) { return (w / 16) * v; };
-    var scaleY = function (v) { return (h / 16) * v; };
-    var radius = function (v) { var min = 10; var max = wh / 2; return min + ((v / 16) * (max - min)); };
-    var color = function (i) {
-        var c = [
-            "#1f77b4", "#aec7e8",  // blue
-            "#ff7f0e", "#ffbb78",  // orange
-            "#2ca02c", "#98df8a",  // green
-            "#d62728", "#ff9896",  // red
-            "#9467bd", "#c5b0d5",  // purple
-            "#8c564b", "#c49c94",  // brown
-            // "#e377c2", "#f7b6d2",  // pink
-            // "#7f7f7f", "#c7c7c7",  // gray
-            "#bcbd22", "#dbdb8d",  // yellow
-            "#17becf", "#9edae5",  // cyan
-        ];
-        return c[i % c.length];
-    };
-
-    var bubbleInfo = [];
-    for (var i = 0; i < n; i++) {
-        var xRel = hashGroup[2 * i];
-        var yRel = hashGroup[2 * i + 1];
-        bubbleInfo.push({
-            x: scaleX(xRel),
-            y: scaleY(yRel),
-            radius: radius(hashGroup[(xRel * yRel) % hashGroup.length]),
-            color: color(xRel + yRel)
-        });
+  function extractShortLabel(title) {
+    var t = String(title || '').trim();
+    if (!t) return 'Research Paper';
+    var colonIdx = t.indexOf(':');
+    if (colonIdx > 1 && colonIdx <= 18) {
+      return t.slice(0, colonIdx).trim();
     }
-    return bubbleInfo;
-}
+    var words = t.split(/\s+/).filter(Boolean);
+    if (words.length <= 3) return t;
+    return words.slice(0, 3).join(' ') + '...';
+  }
 
+  function drawGrid(svg, w, h, pal) {
+    var step = 24;
+    for (var x = step; x < w; x += step) {
+      el('line', { x1: x, y1: 0, x2: x, y2: h, stroke: pal.grid, 'stroke-width': 1 }, svg);
+    }
+    for (var y = step; y < h; y += step) {
+      el('line', { x1: 0, y1: y, x2: w, y2: y, stroke: pal.grid, 'stroke-width': 1 }, svg);
+    }
+  }
 
-drawBubble = function (svg, bubbleInfo) {
-    //  Sort bubbles by radius in descending order
-    bubbleInfo.sort(function (a, b) {
-        return b.radius - a.radius;
+  function drawNeuralMesh(svg, bytes, w, h, pal) {
+    var pts = [];
+    for (var i = 0; i < 10; i++) {
+      pts.push({
+        x: 35 + ((bytes[i] / 255) * (w - 60)),
+        y: 22 + ((bytes[i + 10] / 255) * (h - 70)),
+        r: 2.5 + (bytes[i + 20] % 4),
+      });
+    }
+    for (var a = 0; a < pts.length; a++) {
+      for (var b = a + 1; b < pts.length; b++) {
+        var dx = pts[a].x - pts[b].x;
+        var dy = pts[a].y - pts[b].y;
+        var dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 105) {
+          el('line', {
+            x1: pts[a].x.toFixed(1),
+            y1: pts[a].y.toFixed(1),
+            x2: pts[b].x.toFixed(1),
+            y2: pts[b].y.toFixed(1),
+            stroke: (a + b) % 2 === 0 ? pal.p1 : pal.p2,
+            'stroke-opacity': (0.42 - dist / 280).toFixed(2),
+            'stroke-width': 1.2,
+          }, svg);
+        }
+      }
+    }
+    pts.forEach(function (pt, idx) {
+      if (idx % 3 === 0) {
+        el('circle', {
+          cx: pt.x.toFixed(1),
+          cy: pt.y.toFixed(1),
+          r: (pt.r * 2.4).toFixed(1),
+          fill: 'none',
+          stroke: pal.p1,
+          'stroke-opacity': 0.28,
+          'stroke-width': 1,
+        }, svg);
+      }
+      el('circle', {
+        cx: pt.x.toFixed(1),
+        cy: pt.y.toFixed(1),
+        r: pt.r.toFixed(1),
+        fill: idx % 2 === 0 ? pal.p1 : pal.p2,
+        'fill-opacity': 0.85,
+      }, svg);
     });
-    for (var i = 0; i < bubbleInfo.length; i++) {
-        var bubble = bubbleInfo[i];
-        var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-        circle.setAttribute("cx", bubble.x);
-        circle.setAttribute("cy", bubble.y);
-        circle.setAttribute("r", bubble.radius);
-        circle.setAttribute("fill", bubble.color);
-        circle.setAttribute("fill-opacity", 0.75);
-        svg.appendChild(circle);
-    }
-}
+  }
 
-var canvases = document.querySelectorAll(".bubble-visual-hash");
-canvases.forEach(function (canvas) {
-    var hash = canvas.getAttribute("data-bubble-visual-hash");
-    var width = canvas.viewBox.baseVal.width;
-    var height = canvas.viewBox.baseVal.height;
-    var bubbleInfo = createBubbleInfo(createHashGroupForString(hash), 8, width, height);
-    drawBubble(canvas, bubbleInfo);
-});
+  function drawContours(svg, bytes, w, h, pal) {
+    var cx = w * (0.55 + (bytes[2] % 25) / 100);
+    var cy = h * (0.38 + (bytes[3] % 20) / 100);
+    for (var i = 1; i <= 7; i++) {
+      var rx = 20 + i * 21;
+      var ry = 14 + i * 14;
+      var rot = ((bytes[i] % 40) - 20);
+      el('ellipse', {
+        cx: cx.toFixed(1),
+        cy: cy.toFixed(1),
+        rx: rx,
+        ry: ry,
+        transform: 'rotate(' + rot + ' ' + cx.toFixed(1) + ' ' + cy.toFixed(1) + ')',
+        fill: 'none',
+        stroke: i % 2 === 0 ? pal.p1 : pal.p2,
+        'stroke-opacity': (0.48 - i * 0.045).toFixed(2),
+        'stroke-width': i === 3 ? 1.8 : 1.1,
+        'stroke-dasharray': i % 3 === 0 ? '4 4' : 'none',
+      }, svg);
+    }
+    // Precision crosshair
+    el('line', { x1: cx - 10, y1: cy, x2: cx + 10, y2: cy, stroke: pal.p1, 'stroke-opacity': 0.65, 'stroke-width': 1.2 }, svg);
+    el('line', { x1: cx, y1: cy - 10, x2: cx, y2: cy + 10, stroke: pal.p1, 'stroke-opacity': 0.65, 'stroke-width': 1.2 }, svg);
+  }
+
+  function drawAttentionMatrix(svg, bytes, w, h, pal) {
+    var cols = 7;
+    var rows = 4;
+    var cellW = 24;
+    var cellH = 20;
+    var startX = w - cols * (cellW + 4) - 18;
+    var startY = 20;
+    for (var r = 0; r < rows; r++) {
+      for (var c = 0; c < cols; c++) {
+        var v = bytes[(r * cols + c) % bytes.length] / 255;
+        var isDiag = r === c || Math.abs(r - c) === 1;
+        var opacity = isDiag ? 0.48 + v * 0.32 : 0.08 + v * 0.24;
+        el('rect', {
+          x: startX + c * (cellW + 4),
+          y: startY + r * (cellH + 4),
+          width: cellW,
+          height: cellH,
+          rx: 4,
+          fill: (r + c) % 3 === 0 ? pal.p2 : pal.p1,
+          'fill-opacity': opacity.toFixed(2),
+        }, svg);
+      }
+    }
+  }
+
+  function drawWaves(svg, bytes, w, h, pal) {
+    for (var layer = 0; layer < 4; layer++) {
+      var baseY = 48 + layer * 24;
+      var amp = 14 + (bytes[layer] % 18);
+      var freq = 0.018 + (bytes[layer + 4] % 10) * 0.0015;
+      var phase = (bytes[layer + 8] / 255) * Math.PI * 2;
+      var d = 'M 0 ' + baseY;
+      for (var x = 12; x <= w; x += 12) {
+        var y = baseY + Math.sin(x * freq + phase) * amp;
+        d += ' L ' + x + ' ' + y.toFixed(1);
+      }
+      el('path', {
+        d: d,
+        fill: 'none',
+        stroke: layer % 2 === 0 ? pal.p1 : pal.p2,
+        'stroke-opacity': (0.55 - layer * 0.08).toFixed(2),
+        'stroke-width': layer === 0 ? 2.2 : 1.3,
+      }, svg);
+    }
+  }
+
+  function renderAcademicCover(svg, options) {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    var w = (svg.viewBox && svg.viewBox.baseVal && svg.viewBox.baseVal.width) || 300;
+    var h = (svg.viewBox && svg.viewBox.baseVal && svg.viewBox.baseVal.height) || 200;
+    var seedStr = options.seed || options.title || 'paper';
+    var bytes = hashBytes(seedStr);
+    var pal = PALETTES[typeof options.paletteIdx === 'number' ? options.paletteIdx % PALETTES.length : bytes[0] % PALETTES.length];
+    var motif = typeof options.motifIdx === 'number' ? options.motifIdx % 4 : bytes[1] % 4;
+
+    var gradId = 'acg-' + bytes[0] + '-' + bytes[1] + '-' + bytes[2] + '-' + Math.floor(Math.random() * 10000);
+    var defs = el('defs', {}, svg);
+    var grad = el('linearGradient', { id: gradId, x1: '0%', y1: '0%', x2: '100%', y2: '100%' }, defs);
+    el('stop', { offset: '0%', 'stop-color': pal.bg1 }, grad);
+    el('stop', { offset: '100%', 'stop-color': pal.bg2 }, grad);
+
+    // Background + subtle border
+    el('rect', { x: 0, y: 0, width: w, height: h, fill: 'url(#' + gradId + ')' }, svg);
+    drawGrid(svg, w, h, pal);
+
+    // Decorative ambient glow
+    el('circle', {
+      cx: (w * 0.82).toFixed(0),
+      cy: (h * 0.22).toFixed(0),
+      r: 72,
+      fill: pal.p1,
+      'fill-opacity': pal.dark ? 0.12 : 0.09,
+    }, svg);
+
+    if (motif === 0) drawNeuralMesh(svg, bytes, w, h, pal);
+    else if (motif === 1) drawContours(svg, bytes, w, h, pal);
+    else if (motif === 2) drawAttentionMatrix(svg, bytes, w, h, pal);
+    else drawWaves(svg, bytes, w, h, pal);
+
+    // Bottom editorial typography card strip
+    el('rect', {
+      x: 0,
+      y: h - 68,
+      width: w,
+      height: 68,
+      fill: pal.dark ? 'rgba(9, 14, 24, 0.56)' : 'rgba(255, 255, 255, 0.82)',
+    }, svg);
+    el('line', {
+      x1: 0,
+      y1: h - 68,
+      x2: w,
+      y2: h - 68,
+      stroke: pal.p1,
+      'stroke-opacity': 0.35,
+      'stroke-width': 1,
+    }, svg);
+
+    // Accent bar
+    el('rect', { x: 16, y: h - 52, width: 3, height: 36, rx: 1.5, fill: pal.p1 }, svg);
+
+    var label = extractShortLabel(options.title);
+    var titleEl = el('text', {
+      x: 27,
+      y: h - 35,
+      fill: pal.fg,
+      'font-family': '"IBM Plex Sans", system-ui, -apple-system, sans-serif',
+      'font-size': label.length > 16 ? '13.5' : '16',
+      'font-weight': '700',
+      'letter-spacing': '-0.01em',
+    }, svg);
+    titleEl.textContent = label;
+
+    var subParts = [];
+    if (options.venue) subParts.push(options.venue);
+    if (options.year) subParts.push(options.year);
+    var subText = subParts.join(' · ') || 'Academic Publication';
+    if (subText.length > 36) subText = subText.slice(0, 34) + '…';
+
+    var subEl = el('text', {
+      x: 27,
+      y: h - 18,
+      fill: pal.muted,
+      'font-family': '"IBM Plex Sans", system-ui, -apple-system, sans-serif',
+      'font-size': '10.5',
+      'font-weight': '500',
+    }, svg);
+    subEl.textContent = subText;
+
+    // Subtle border
+    el('rect', {
+      x: 0.5,
+      y: 0.5,
+      width: w - 1,
+      height: h - 1,
+      fill: 'none',
+      stroke: pal.dark ? 'rgba(255,255,255,0.10)' : 'rgba(15,23,42,0.10)',
+    }, svg);
+  }
+
+  window.renderAcademicCover = renderAcademicCover;
+
+  var canvases = document.querySelectorAll('.bubble-visual-hash');
+  canvases.forEach(function (canvas) {
+    renderAcademicCover(canvas, {
+      seed: canvas.getAttribute('data-bubble-visual-hash') || '',
+      title: canvas.getAttribute('data-pub-title') || '',
+      venue: canvas.getAttribute('data-pub-venue') || '',
+      year: canvas.getAttribute('data-pub-year') || '',
+    });
+  });
+})();
