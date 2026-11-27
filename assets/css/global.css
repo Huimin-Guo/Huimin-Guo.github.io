@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap");
 
 :root {
+    --color-tag-text: #1f2937;
+    --color-tag-bg: #f8f9fa;
+    --color-card-bg: #ffffff;
     --color-accent: #357ace;
     --color-accent-hover: #359466;
     --color-link-card: #98A8F8;
@@ -369,3 +372,17 @@ a.item_link {
         transition: none;
     }
 }
+
+/* --- Studio Theme Overrides Start --- */
+.card, .bg-white {
+    background-color: var(--color-card-bg, #ffffff) !important;
+}
+.tag-badge {
+    background-color: var(--color-tag-bg, #f8f9fa) !important;
+    color: var(--color-tag-text, #1f2937) !important;
+}
+.rounded-xl {
+    border-radius: 8px !important;
+}
+.figure-img { border-radius: calc(var(--card-radius, 8px) * 0.75); }
+/* --- Studio Theme Overrides End --- */
